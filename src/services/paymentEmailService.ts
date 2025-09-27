@@ -19,7 +19,7 @@ export const sendPaymentConfirmation = async (
       <p>Dear User,</p>
       <p>Your payment of <strong>$${formattedAmount}</strong> for booking #${bookingId} has been successfully processed.</p>
       <p>You can view your booking details and receipt by logging into your account.</p>
-      <p>Thank you for using Urban Caregiving!</p>
+      <p>Thank you for using Urban care-connect!</p>
     `;
 
     const emailResult = await sendEmail(email, subject, html);
@@ -61,7 +61,7 @@ export const sendRefundConfirmation = async (
       <p>Your refund of <strong>$${formattedAmount}</strong> for booking #${bookingId} has been processed.</p>
       <p>The refund should appear in your account within 5-10 business days, depending on your payment method and financial institution.</p>
       <p>If you have any questions about this refund, please contact our support team.</p>
-      <p>Thank you for using Urban Caregiving!</p>
+      <p>Thank you for using Urban care-connect!</p>
     `;
 
     const emailResult = await sendEmail(email, subject, html);
@@ -102,7 +102,7 @@ export const sendPayoutConfirmation = async (
       <p>Your payout of <strong>$${formattedAmount}</strong> has been processed and is on its way to your bank account.</p>
       <p>The funds should appear in your account within 2-5 business days, depending on your financial institution.</p>
       <p>You can view your earnings and payout history by logging into your provider dashboard.</p>
-      <p>Thank you for being a part of Urban Caregiving!</p>
+      <p>Thank you for being a part of Urban care-connect!</p>
     `;
 
     const emailResult = await sendEmail(email, subject, html);
@@ -142,7 +142,7 @@ export const sendPaymentFailedEmail = async (
       <p>This could be due to insufficient funds, expired card details, or other issues with your payment method.</p>
       <p>Please log in to your account to update your payment information and try again.</p>
       <p>If you continue to experience issues, please contact our support team for assistance.</p>
-      <p>Thank you for using Urban Caregiving!</p>
+      <p>Thank you for using Urban care-connect!</p>
     `;
 
     const emailResult = await sendEmail(email, subject, html);
@@ -185,7 +185,7 @@ export const sendPaymentDisputeEmail = async (
       <p>Our team is currently reviewing this dispute and will be in touch with you shortly for more information.</p>
       <p>If you have any questions or would like to provide additional information about this transaction, please contact our support team.</p>
       <p>Thank you for your patience and understanding.</p>
-      <p>Urban Caregiving Support Team</p>
+      <p>Urban care-connect Support Team</p>
     `;
 
     const emailResult = await sendEmail(email, subject, html);

@@ -123,7 +123,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Status:</strong> ${status}</li>
           </ul>
           <p>You will receive another notification when the provider confirms your booking.</p>
-          <p>Thank you for using Urban Caregiving!</p>
+          <p>Thank you for using Urban care-connect!</p>
         `;
 
         providerSubject = `New Booking Request: ${serviceName}`;
@@ -142,7 +142,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Status:</strong> ${status}</li>
           </ul>
           <p>Please log in to your account to confirm or decline this booking.</p>
-          <p>Thank you for being a part of Urban Caregiving!</p>
+          <p>Thank you for being a part of Urban care-connect!</p>
         `;
         break;
 
@@ -162,7 +162,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Address:</strong> ${address}</li>
             <li><strong>Status:</strong> Confirmed</li>
           </ul>
-          <p>Thank you for using Urban Caregiving!</p>
+          <p>Thank you for using Urban care-connect!</p>
         `;
 
         providerSubject = `Booking Confirmation: ${serviceName}`;
@@ -180,7 +180,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Address:</strong> ${address}</li>
             <li><strong>Status:</strong> Confirmed</li>
           </ul>
-          <p>Thank you for being a part of Urban Caregiving!</p>
+          <p>Thank you for being a part of Urban care-connect!</p>
         `;
         break;
 
@@ -200,7 +200,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Address:</strong> ${address}</li>
             <li><strong>Status:</strong> In Progress</li>
           </ul>
-          <p>Thank you for using Urban Caregiving!</p>
+          <p>Thank you for using Urban care-connect!</p>
         `;
 
         providerSubject = `Service Started: ${serviceName}`;
@@ -218,7 +218,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Address:</strong> ${address}</li>
             <li><strong>Status:</strong> In Progress</li>
           </ul>
-          <p>Thank you for being a part of Urban Caregiving!</p>
+          <p>Thank you for being a part of Urban care-connect!</p>
         `;
         break;
 
@@ -239,7 +239,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Status:</strong> Completed</li>
           </ul>
           <p>We hope you had a great experience! Please take a moment to leave a review for your provider.</p>
-          <p>Thank you for using Urban Caregiving!</p>
+          <p>Thank you for using Urban care-connect!</p>
         `;
 
         providerSubject = `Service Completed: ${serviceName}`;
@@ -257,7 +257,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Address:</strong> ${address}</li>
             <li><strong>Status:</strong> Completed</li>
           </ul>
-          <p>Thank you for being a part of Urban Caregiving!</p>
+          <p>Thank you for being a part of Urban care-connect!</p>
         `;
         break;
 
@@ -278,7 +278,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Status:</strong> Cancelled</li>
           </ul>
           <p>If you have any questions, please contact our support team.</p>
-          <p>Thank you for using Urban Caregiving!</p>
+          <p>Thank you for using Urban care-connect!</p>
         `;
 
         providerSubject = `Booking Cancelled: ${serviceName}`;
@@ -297,7 +297,7 @@ export const sendBookingNotificationEmail = async (
             <li><strong>Status:</strong> Cancelled</li>
           </ul>
           <p>If you have any questions, please contact our support team.</p>
-          <p>Thank you for being a part of Urban Caregiving!</p>
+          <p>Thank you for being a part of Urban care-connect!</p>
         `;
         break;
     }
@@ -362,7 +362,7 @@ export const sendChatNotificationEmail = async (
         100
       )}${messagePreview.length > 100 ? "..." : ""}"</p>
       <p>Please log in to your account to view and respond to this message.</p>
-      <p>Thank you for using Urban Caregiving!</p>
+      <p>Thank you for using Urban care-connect!</p>
     `;
 
     const emailResult = await sendEmail(userEmail, subject, html);
@@ -409,7 +409,7 @@ export const sendReviewNotificationEmail = async (
         <li><strong>Comment:</strong> "${comment}"</li>
       </ul>
       <p>Please log in to your account to view this review.</p>
-      <p>Thank you for being a part of Urban Caregiving!</p>
+      <p>Thank you for being a part of Urban care-connect!</p>
     `;
 
     const emailResult = await sendEmail(providerEmail, subject, html);
@@ -448,7 +448,7 @@ export const sendSystemNotificationEmail = async (
       <h2>${subject}</h2>
       <p>Dear User,</p>
       <p>${message}</p>
-      <p>Thank you for using Urban Caregiving!</p>
+      <p>Thank you for using Urban care-connect!</p>
     `;
 
     const emailResult = await sendEmail(userEmail, subject, html);

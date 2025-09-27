@@ -1,6 +1,6 @@
 # AWS S3 Integration for Media Storage
 
-This document provides information on how the AWS S3 integration works in the Caregiving application for storing images, videos, and documents.
+This document provides information on how the AWS S3 integration works in the care-connect application for storing images, videos, and documents.
 
 ## Overview
 
@@ -22,7 +22,7 @@ The following environment variables need to be set in the `.env` file:
 AWS_ACCESS_KEY_ID="YOUR_AWS_ACCESS_KEY_ID"
 AWS_SECRET_ACCESS_KEY="YOUR_AWS_SECRET_ACCESS_KEY"
 AWS_REGION="us-east-1"
-AWS_S3_BUCKET_NAME="caregiving-app-uploads"
+AWS_S3_BUCKET_NAME="care-connect-app-uploads"
 USE_LOCAL_STORAGE="false"  # Set to "true" to use local storage instead of S3
 ```
 
@@ -33,7 +33,7 @@ USE_LOCAL_STORAGE="false"  # Set to "true" to use local storage instead of S3
 2. **Create an S3 Bucket**:
    - Go to the S3 service in the AWS Console
    - Click "Create bucket"
-   - Choose a unique name for your bucket (e.g., "caregiving-app-uploads")
+   - Choose a unique name for your bucket (e.g., "care-connect-app-uploads")
    - Select the region closest to your users
    - Configure bucket settings (public access, versioning, etc.)
    - Create the bucket
