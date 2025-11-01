@@ -161,7 +161,7 @@ class App {
     // Base route
     this.express.get('/api/v1', (req: Request, res: Response) => {
       res.status(200).json({
-        message: 'CareCrew Platform API',
+        message: 'Care Connect Platform API',
         status: 'Running',
         timestamp: new Date().toISOString()
       });
