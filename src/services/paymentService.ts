@@ -147,24 +147,24 @@ export const confirmPayment = async (
     console.log("Backend: Updated payment status to COMPLETED");
 
     // Send notification to the provider
-    await paymentNotificationService.createPaymentNotification(
-      payment.providerId.toString(),
-      payment.userId.toString(),
-      payment.amount,
-      payment.bookingId.toString()
-    );
+    // await paymentNotificationService.createPaymentNotification(
+    //   payment.providerId.toString(),
+    //   payment.userId.toString(),
+    //   payment.amount,
+    //   payment.bookingId.toString()
+    // );
     console.log("Backend: Sent payment notification to provider");
 
     // Send email confirmation to the user
-    const user = await User.findById(payment.userId);
-    if (user && user.email) {
-      await paymentEmailService.sendPaymentConfirmation(
-        user.email,
-        payment.amount,
-        payment.bookingId.toString()
-      );
-      console.log("Backend: Sent payment confirmation email to user");
-    }
+    // const user = await User.findById(payment.userId);
+    // if (user && user.email) {
+    //   await paymentEmailService.sendPaymentConfirmation(
+    //     user.email,
+    //     payment.amount,
+    //     payment.bookingId.toString()
+    //   );
+    //   console.log("Backend: Sent payment confirmation email to user");
+    // }
 
     return payment;
   } catch (error) {
